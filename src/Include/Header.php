@@ -185,11 +185,11 @@ $MenuFirst = 1;
       </button>
       <a href="<?= SystemURLs::getRootPath() ?>/v2/dashboard" class="navbar-brand py-2">
         <img src="<?= SystemURLs::getRootPath() ?>/Images/CRM_50x50.png"
-             alt="<?= InputUtils::escapeAttribute(ChurchMetaData::getChurchName() ?: 'ChurchCRM') ?>"
+             alt="<?= InputUtils::escapeAttribute(ChurchMetaData::getChurchName() ?: 'ParishCRM') ?>"
              class="navbar-brand-image rounded"
              style="height: 42px; width: auto;">
         <span class="navbar-brand-text ps-2 fs-4 fw-bold">
-          <?= ChurchMetaData::getChurchName() ?: 'ChurchCRM' ?>
+          <?= ChurchMetaData::getChurchName() ?: 'ParishCRM' ?>
         </span>
       </a>
       <div class="collapse navbar-collapse" id="sidebar-menu">
@@ -243,7 +243,7 @@ $MenuFirst = 1;
               <?php } ?>
             </a>
             <?php } ?>
-            <a href="https://github.com/ChurchCRM/CRM/releases/latest" target="_blank"
+            <a href="https://github.com/Catholic-Work/ParishCRM/releases/latest" target="_blank"
                class="dropdown-item" title="<?= gettext('Release Notes') ?>">
               <i class="ti ti-book me-2"></i><?= gettext('Release Notes') ?>
             </a>
@@ -301,7 +301,7 @@ $MenuFirst = 1;
               <i class="fa-brands fa-discord me-2"></i><?= gettext('Discord Chat') ?>
             </a>
             <div class="dropdown-divider"></div>
-            <a href="https://docs.churchcrm.io/contributing" target="_blank" class="dropdown-item"
+            <a href="https://github.com/Catholic-Work/ParishCRM/blob/master/CONTRIBUTING.md" target="_blank" class="dropdown-item"
                title="<?= gettext('Contributing') ?>">
               <i class="fa-brands fa-github me-2"></i><?= gettext('Documentation') ?>
             </a>

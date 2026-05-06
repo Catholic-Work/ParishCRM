@@ -1,4 +1,4 @@
-name: churchcrm
+name: parishcrm
 type: php
 docroot: src
 php_version: "8.4"

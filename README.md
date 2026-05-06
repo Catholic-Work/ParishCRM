@@ -1,87 +1,82 @@
-# ChurchCRM
+# ParishCRM
 
-## 🌟 **Welcome to ChurchCRM!** 🌟
+## ⛪ Welcome to ParishCRM
 
-Welcome to ChurchCRM — an open-source church management system. Visit [churchcrm.io](https://churchcrm.io) to learn more.
-
-## ⛪️ About ChurchCRM
-
-ChurchCRM exists to serve the Church — every congregation, in every country, in every language. We believe that God’s people deserve world-class tools without the burden of licensing fees, vendor lock-in, or data ownership concerns. This software is our ministry: open-source, community-built, freely given.
-
-Whether you’re a developer, designer, tester, or simply passionate about improving church management, there’s a place for you here!
+**ParishCRM** is a free, open-source parish management system purpose-built for **Catholic parishes**. It is a fork of [ChurchCRM](https://github.com/ChurchCRM/CRM), extended with Catholic-specific features including sacramental registers, religious education management, liturgical ministry scheduling, diocesan reporting, and more.
 
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
-[![GitHub All Releases](https://img.shields.io/github/downloads/ChurchCRM/CRM/total?color=blue&logo=github)](https://github.com/ChurchCRM/CRM/releases)
-[![Latest Release](https://img.shields.io/github/v/release/churchcrm/crm?label=Latest%20Release)](https://github.com/ChurchCRM/CRM/releases/latest)
-[![Latest Release Downloads](https://img.shields.io/github/downloads/ChurchCRM/CRM/latest/total?label=latest%20downloads&color=green)](https://github.com/ChurchCRM/CRM/releases/latest)
+[![Upstream](https://img.shields.io/badge/upstream-ChurchCRM%207.3.1-blue)](https://github.com/ChurchCRM/CRM)
 
-## 🚀 Get Started
+## 🎯 Why ParishCRM?
 
-If you're new to ChurchCRM, start with our **[Documentation](https://docs.churchcrm.io/)**.
-You'll find step-by-step installation instructions, configuration notes, and user guides there.
+While ChurchCRM is an excellent general-purpose church management system, Catholic parishes have **specific canonical and operational needs** that generic tools don't address:
 
-Quick start: see the "Quick Start" section in the Documentation for a fast setup.
+- **Sacramental Records** — Baptisms, Confirmations, First Holy Communions, Marriages, and Deaths with proper marginal notations, godparent/sponsor tracking, and certificate generation
+- **Religious Education** — CCD/PSR enrollment with sacramental preparation tracks (FHC/Penance Year 1-2, Confirmation Year 1-2, RCIA/OCIA)
+- **Liturgical Ministry Scheduling** — Lectors, EMHCs, Altar Servers, Cantors, Sacristans, Ushers, and 20+ additional ministry roles
+- **Diocesan Compliance** — Automated annual reports for the Chancery, fund-based accounting, and IRS-compliant contribution statements
+- **Safeguarding** — Background check and Safe Environment training tracking with expiration alerts
 
-For detailed technical Documentation and developer guides, see our [Documentation](https://docs.churchcrm.io/).
+## 🚀 Demo
 
-To test the demo, visit our official demo page:
+Visit our live demo populated with the fictitious **Holy Spirit Catholic Parish**:
 
--- Demo: [Demo site](https://churchcrm.io/demo.html) — NOTE: this is a shared, read-write demo that may be reset regularly and contains only sample data; do not use it for any sensitive or production data.
+**[https://crm.catholic.work](https://crm.catholic.work)**
 
-## 🌐 Localization Support
+## 🛠️ Technical Stack
 
-One of ChurchCRM's strengths is its commitment to inclusivity.
-ChurchCRM proudly supports localization in **40+ locales**, ensuring accessibility for diverse communities worldwide.
-Whether you speak English, Spanish, French, or another supported language, you can use ChurchCRM in a familiar way.
+| Component | Technology |
+|-----------|-----------|
+| Backend | PHP 8.4+ / Slim Framework v4 |
+| ORM | Propel |
+| Database | MySQL 8.0+ / MariaDB 10.5+ |
+| Frontend | Tabler (Bootstrap 5) + React + Webpack |
+| Testing | Cypress (E2E) + PHPUnit |
 
-Join our [localization team on poeditor.com](https://poeditor.com/join/project/RABdnDSqAt) to contribute to your language’s support.
+## 📦 Getting Started
 
-See the latest translation status and audit report: [locale/poeditor-audit.md](locale/poeditor-audit.md).
+### Prerequisites
+- PHP 8.4+
+- MySQL 8.0+ or MariaDB 10.5+
+- Apache 2.4+ with `mod_rewrite`
+- Node.js 24+
+- Composer
 
-## 💡 How to Contribute
+### Installation
 
-We welcome contributions from everyone! Whether it's bug reports, feature requests, or code contributions, your input is invaluable.
+```bash
+# Clone the repository
+git clone https://github.com/Catholic-Work/ParishCRM.git
+cd ParishCRM
 
-[See the [contribution guidelines](CONTRIBUTING.md) for how to file issues and submit pull requests.]
+# Install PHP dependencies
+cd src && composer install --no-dev && cd ..
 
-- Quick contributions: fork the repository, create a feature branch, run the test suite, and open a pull request; see CONTRIBUTING.md for details.
+# Install JS dependencies and build frontend
+npm install
+npm run build
 
-[![GitHub contributors](https://img.shields.io/github/contributors/churchcrm/crm.svg)](https://github.com/ChurchCRM/CRM/graphs/contributors)
-[![Join the chat at Discord](https://img.shields.io/badge/Discord-ChurchCRM-5865F2?logo=discord&logoColor=white)](https://discord.gg/tuWyFzj3Nj)
+# Configure your database
+cp src/Include/Config.php.example src/Include/Config.php
+# Edit Config.php with your database credentials
+```
 
-## 📚 Documentation
+For detailed installation instructions, see the [ChurchCRM Documentation](https://docs.churchcrm.io/).
 
-Our [Documentation](https://docs.churchcrm.io) is your go-to resource for understanding ChurchCRM.
-If you notice anything missing or unclear, feel free to open an issue or submit a pull request.
+## 🤝 Contributing
 
-## 🤝 Community
+ParishCRM welcomes contributions from developers, designers, and parish staff who understand Catholic parish operations. Whether it's a bug fix, a new feature, or feedback on how your parish could use the software — your input is invaluable.
 
-Join our [Discord community](https://discord.gg/tuWyFzj3Nj) to connect with other users, ask questions, and share your experiences.
-We believe in the power of a supportive community!
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
-## 🙏 Thank You
+## 📜 License
 
-A heartfelt thank you to all our contributors, past and present. Your efforts make ChurchCRM better with every release.
+ParishCRM is released under the [MIT License](LICENSE), the same as the upstream ChurchCRM project.
 
-### Recent Contribution History
+## 🙏 Acknowledgments
 
-![Recent Contribution History](https://repobeats.axiom.co/api/embed/923dc0771aee335863075abad3967d24b57f39d2.svg "Repobeats analytics image for ChurchCRM")
+ParishCRM is built on the excellent work of the [ChurchCRM](https://github.com/ChurchCRM/CRM) community. We are grateful for their ministry of open-source software for the Church.
 
-### Star History
+---
 
-[![Star History Chart](https://api.star-history.com/svg?repos=churchcrm/crm&type=Date)](https://star-history.com/#churchcrm/crm&Date)
-
-## 🌐 Stay Connected
-
-Follow us for release announcements, tips, and community highlights:
-
-[![Website](https://img.shields.io/badge/Website-churchcrm.io-blue)](https://churchcrm.io/)
-[![X / Twitter](https://img.shields.io/badge/X-@getChurchCRM-black?logo=x)](https://x.com/getChurchCRM)
-[![Facebook](https://img.shields.io/badge/Facebook-getChurchCRM-1877F2?logo=facebook&logoColor=white)](https://www.facebook.com/getChurchCRM)
-[![Instagram](https://img.shields.io/badge/Instagram-@getchurchcrm-E4405F?logo=instagram&logoColor=white)](https://www.instagram.com/getchurchcrm/)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-ChurchCRM-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/company/getchurchcrm/)
-[![Discord Chat](https://img.shields.io/badge/Discord-Chat-5865F2?logo=discord&logoColor=white)](https://discord.gg/tuWyFzj3Nj)
-
-Happy coding and community building! 🎉
-
-— The ChurchCRM Team
+*Ad Maiorem Dei Gloriam* 🕊️

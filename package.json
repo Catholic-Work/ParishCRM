@@ -1,22 +1,24 @@
 {
-    "name": "churchcrm",
-    "version": "7.3.2",
-    "description": "Free Church CRM Software",
+    "name": "parishcrm",
+    "version": "0.1.0",
+    "description": "Catholic Parish Management System — a ChurchCRM fork for Catholic parishes",
     "repository": {
         "type": "git",
-        "url": "https://github.com/ChurchCRM/CRM.git"
+        "url": "https://github.com/Catholic-Work/ParishCRM.git"
     },
     "keywords": [
-        "Church",
+        "Catholic",
+        "Parish",
         "CRM",
-        "LAMP",
-        "Free"
+        "Sacraments",
+        "Church",
+        "LAMP"
     ],
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/ChurchCRM/CRM/issues"
+        "url": "https://github.com/Catholic-Work/ParishCRM/issues"
     },
-    "homepage": "https://churchcrm.io",
+    "homepage": "https://crm.catholic.work",
     "engines": {
         "node": ">=24.0.0"
     },
